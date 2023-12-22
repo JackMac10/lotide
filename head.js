@@ -11,7 +11,7 @@ module.exports = assertEqual;
 
 
 function head(array) {
-return array.[0]
+return array[0]
 }
 
 

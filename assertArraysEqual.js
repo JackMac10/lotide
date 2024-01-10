@@ -11,12 +11,12 @@ const asssertArraysEqual = function(array, array2) {
     }
     else {
       result == true;
-    }Z
+    }
   }
   if (result = true) {
     console.log(`🟢🟢🟢 Assertion Passed: ${array} and ${array2} are the SAME!`);
   }
-  else if (eqArrays = false) {
+  else if (asssertArraysEqual = false) {
     console.log(`🚫🚫🚫 Assertion Failed: ${array} Is NOT the same as ${array2}`);
   }
 };

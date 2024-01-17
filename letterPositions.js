@@ -16,7 +16,7 @@ const assertArraysEqual = function(array, array2) {
   if (result = true) {
     console.log(`🟢🟢🟢 Assertion Passed: ${array} and ${array2} are the SAME!`);
   }
-  else if (asssertArraysEqual = false) {
+  else if (assertArraysEqual = false) {
     console.log(`🚫🚫🚫 Assertion Failed: ${array} Is NOT the same as ${array2}`);
   }
 };

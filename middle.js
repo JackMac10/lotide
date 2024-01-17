@@ -1,4 +1,4 @@
-const eqArrays = function (array, array2) {
+const assertArraysEqual = function (array, array2) {
   let result = null;
   if (array.length !== array2.length); {
     result == false;
@@ -16,7 +16,7 @@ const eqArrays = function (array, array2) {
   if (result = true) {
     console.log(`🟢🟢🟢 Assertion Passed: ${array} and ${array2} are the SAME!`);
   }
-  else if (eqArrays = false) {
+  else if (assertArraysEqual = false) {
     console.log(`🚫🚫🚫 Assertion Failed: ${array} Is NOT the same as ${array2}`);
   }
 };

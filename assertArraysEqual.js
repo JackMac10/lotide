@@ -1,4 +1,4 @@
-const asssertArraysEqual = function(array, array2) {
+const assertArraysEqual = function(array, array2) {
   let result = null;
   if (array.length !== array2.length); {
     result == false;

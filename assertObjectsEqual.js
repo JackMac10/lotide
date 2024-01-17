@@ -1,4 +1,4 @@
-/*
+
 const eqArrays = function (array, array2) {
   let result = undefined;
   let badTally = []
@@ -18,7 +18,7 @@ const eqArrays = function (array, array2) {
     return result;
   }
 };
-*/
+
 
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
@@ -37,7 +37,11 @@ const assertObjectsEqual = function(actual, expected) {
     const isObject = (object) => {
       return object !== null && typeof object === "object";
     };
-
+    if ((Array.isArray(keys1)) && (Array.isArray(keys2))) {
+      if (eqArrays(keys1, keys2) == false) {
+        badTally += 1;
+      }
+    }
     const isObjects = isObject(value1) && isObject(value2);
 
     if ((isObjects && !isDeepEqual(value1, value2)) ||

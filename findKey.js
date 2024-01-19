@@ -1,8 +1,7 @@
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
-  }
-  else if (actual !== expected) {
+  } else if (actual !== expected) {
     console.log(`🚫🚫🚫 Assertion Failed: ${actual} !== ${expected}`);
   }
 
@@ -29,4 +28,4 @@ const result = findKey({
 }, x => x.stars === 3);
 
 console.log(result);
-assertEqual((result), "Akaleri")
+assertEqual((result), "Akaleri");

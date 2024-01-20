@@ -62,6 +62,9 @@ const assertObjectsEqual = function(actual, expected) {
 
 };
 
+module.exports = assertObjectsEqual
+
+
 /*the jail
 
 const isObject = (object) => {

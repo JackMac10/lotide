@@ -7,7 +7,25 @@ const assertEqual = function (actual, expected) {
   }
 
 };
-module.exports = assertEqual;
+
+
+const countLetters = function (inputString) {
+  const results = {};
+  for (const item of inputString) {
+    if (results[item]) {
+      results[item] += 1;
+    } else {
+      results[item] = 1;
+
+    }
+  }
+  return results
+}
+module.exports = countLetters;
+
+
+
+
 
 /*
 const iterable = "boo";
@@ -15,23 +33,5 @@ const iterable = "boo";
 for (const value of iterable) {
   console.log(value);
   */
-
-
-
-const inputString = "lllllllighthousewwwww";
-const results = {};
-for (const item of inputString) {
-
-  if (results[item]) {
-    results[item] += 1;
-  } else {
-    results[item] = 1;
-
-  }
-  
-}
-
-console.log(results);
-
 
 

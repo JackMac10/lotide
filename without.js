@@ -1,3 +1,13 @@
+const without = function (originalArray, itemsToRemove) {
+  const checkWordToRemove = function (word) {
+    return !itemsToRemove.includes(word)
+  }
+  let output = originalArray.filter(checkWordToRemove)
+  return output
+}
+module.exports = without;
+
+/*
 // const without = function (array, [itemsToRemove]) { // map the 2nd list, search array for (itemsToremove)
 //   var removedNum = []
 //   for (let i = 0; i < array.length; i++) { // loop through
@@ -18,16 +28,4 @@ const log = function (item) {
 }
 
 // const result = words.filter((word) => word.length > 6);
-const without = function (originalArray, itemsToRemove) {
-  const checkWordToRemove = function (word) {
-    return !itemsToRemove.includes(word)
-  }
-  let output = originalArray.filter(checkWordToRemove)
-  return output
-}
-// console.log(without(words, oldWords))
-
-console.log(without([1, 2, 3], [1])) // => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"]))
-//console.log(result);
-// Expected output: Array ["exuberant", "destruction", "present"]
+*/

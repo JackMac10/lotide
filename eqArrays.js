@@ -22,5 +22,5 @@ const eqArrays = function (array, array2) {
   }
 };
 
-module.exports = eqArrays
+module.exports = eqArrays;
 

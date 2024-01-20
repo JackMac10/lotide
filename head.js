@@ -7,4 +7,4 @@ function head(array) {
 }
 
 
-module.exports = head
+module.exports = head;

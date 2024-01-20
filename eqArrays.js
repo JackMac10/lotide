@@ -1,6 +1,3 @@
-const assertEqual = require(`./assertEqual`)
-
-
 
 const eqArrays = function (array, array2) {
   let result = undefined;

@@ -3,4 +3,3 @@ return array.flat()
 }
 module.exports = flatten;
 
-

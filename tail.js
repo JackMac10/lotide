@@ -10,6 +10,7 @@ const tail = function (array) {
 
 module.exports = tail
 
+
 /*
 const assertEqual = function (actual, expected) {
   if (actual === expected) {

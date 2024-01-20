@@ -7,4 +7,5 @@ const letterPositions = function (arr) {
       results[arr[i]] = [i];
   }
 }
+}
 module.exports = letterPositions;

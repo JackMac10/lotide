@@ -21,6 +21,7 @@ const assertArraysEqual = function(array, array2) {
   }
 };
 
+module.exports = assertArraysEqual
 //console.log(`🚫🚫🚫 Assertion Failed: ${array} Is NOT the same as ${array2}`)
 //console.log(`🟢🟢🟢 Assertion Passed: ${array} and ${array2} are the SAME!`)
 

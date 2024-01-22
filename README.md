@@ -26,20 +26,4 @@ This project was created and published by me as part of my learnings at lighthou
 
 The following functions are currently implemented:
 
-  head: [Function: head],
-  tail: [Function: tail],
-  middle: [Function: middle],
-  assertArraysEqual: [Function: assertArraysEqual],
-  assertEqual: [Function: assertEqual],
-  assertObjectsEqual: [Function: assertObjectsEqual],
-  countLetters: [Function: countLetters],
-  countOnly: [Function: countOnly],
-  eqArrays: [Function: eqArrays],
-  eqObjects: [Function: eqObjects],
-  findKey: [Function: findKey],
-  findKeyByValue: [Function: findKeyByValue],
-  flatten: [Function: flatten],
-  letterPositions: [Function: letterPositions],
-  map: [Function: map],
-  takeUntil: [Function: takeUntil],
-  without: [Function: without]
+  tail, head, middle, assertArraysEqual, assertEqual, assertObjectsEqual, countLetters, countOnly, eqArrays, eqObjects, findKey, findKeyByValue, flatten, letterPositions, map, takeUntil, without.

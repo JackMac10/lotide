@@ -1,6 +1,3 @@
-const assertEqual =require(`./assertEqual`)
-
-
 function head(array) {
   console.log(array[0])
   return array[0];

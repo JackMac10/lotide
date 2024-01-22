@@ -1,36 +1,39 @@
-const eqObjects = function (object1, object2) {
-  const objectArr1 = Object.keys(object1);
-  const objectArr2 = Object.keys(object2);
-  const obj1Val = (object1?.colors)
-  const obj2Val = (object2?.colors)
+const eqArrays  = require(`./eqArrays`)
 
 
-  for (const keys in object1) {
-    if ((Array.isArray(obj1Val)) && (Array.isArray(obj2Val))) {
-      if (eqArrays(obj1Val, obj2Val) == false) {
-        console.log("stop1")
-        let answer = false
-        return answer
-      }
-    }
-    if (objectArr1.length !== objectArr2.length) {
-      answer = false;
-    } else {
-      if ((Object.keys(object1).includes(Object.keys(object2)[0])) && (Object.keys(object1).includes(Object.keys(object2)[1]))) {
-        answer = true;
+const eqObjects = function(object1, object2) {
+  const keys1 = Object.keys(object1);
+  const keys2 = Object.keys(object2);
 
-      } else {
-        answer = false;
-        return answer;
-      }
-      answer = true;
-      return answer;
-
-    }
-    return answer;
+  if (keys1.length !== keys2.length) {
+    return false;
   }
-}
+
+  for (const key of keys1) {
+    const val1 = object1[key];
+    const val2 = object2[key];
+
+    if (Array.isArray(val1) && Array.isArray(val2)) {
+      if (!eqArrays(val1, val2)) {
+        return false;
+      }
+
+    } else if (typeof val1 === 'object' && typeof val2 === 'object') {
+      if (!eqObjects(val1, val2)) {
+        return false;
+      }
+
+    } else {
+      if (val1 !== val2) {
+        return false;
+      }
+    }
+  }
+
+  return true;
+};
 module.exports = eqObjects;
+
 
 
 /*

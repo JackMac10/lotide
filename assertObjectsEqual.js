@@ -1,61 +1,17 @@
 
-const eqArrays = function (array, array2) {
-  let result = undefined;
-  let badTally = []
-  if (array.length != array2.length) {
-    badTally.push(1)
-  }
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] !== array2[i]) {
-      badTally.push(1)
-    }
-  }
-  if (badTally.length == 0) {
-    (result = true)
-    return result;
-  } else {
-    (result = false)
-    return result;
-  }
-};
+
 
 
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
+  const eqObjects = require(`./eqObjects`)
 
-  const keys1 = Object.keys(actual);
-  const keys2 = Object.keys(expected);
-  let badTally = 0;
-
-  if (keys1.length !== keys2.length) {
-    badTally += 1;
-  }
-
-  for (let key of keys1) {
-    const value1 = actual[key];
-    const value2 = expected[key];
-    const isObject = (object) => {
-      return object !== null && typeof object === "object";
-    };
-    if ((Array.isArray(keys1)) && (Array.isArray(keys2))) {
-      if (eqArrays(keys1, keys2) == false) {
-        badTally += 1;
-      }
-    }
-    const isObjects = isObject(value1) && isObject(value2);
-
-    if ((isObjects && !isDeepEqual(value1, value2)) ||
-      (!isObjects && value1 !== value2)
-    ) {
-      badTally += 1;
-    }
-  }
-  badTally += 0;
-
-  if (badTally === 0) {
+  if ((eqObjects(actual, expected)) === true){
     console.log(`🟢🟢🟢 Assertion Passed: ${inspect(actual)} and ${inspect(expected)} are the SAME!!`);
-  } else if (badTally !== 0) {
+  } else if ((eqObjects(actual, expected)) === false) {
     console.log(`🚫🚫🚫 Assertion Failed: ${inspect(actual)} is NOT equal to ${inspect(expected)}`);
+  } else {
+    console.log("**eqObjectsErr**")
   }
 
   //console.log(`Example label: ${inspect(actual)}`);

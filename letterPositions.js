@@ -1,11 +1,15 @@
-const letterPositions = function (arr) {
+const letterPositions = function (input) {
   const results = {};
-  for (let i = 0; i < arr.length; i++) {
-    if (results[arr[i]]) {
-    results[arr[i]].push(i);
+  let index = 0;
+  for (const char of input) {
+    if (results[char]) {
+      results[char].push(index);
     } else {
-      results[arr[i]] = [i];
+      results[char] = [index];
+    }
+    index++;
   }
+return results;
 }
-}
+
 module.exports = letterPositions;
